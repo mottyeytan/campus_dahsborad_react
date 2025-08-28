@@ -1,6 +1,9 @@
 
 import './App.css'
 import FilterBar from './componets/FilterBar'
+import MemberCard from './componets/MemberCard'
+import profile1 from './assets/profile1.png'
+
 function App() {
 
   return (
@@ -10,6 +13,13 @@ function App() {
 
           <FilterBar/>
 
+          <MemberCard
+           id={1}
+           name='Glenda Garcia'
+           image={profile1}
+           role='CO-Organizer'
+           isActive={true}
+          />
 
 
 
