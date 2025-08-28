@@ -10,7 +10,7 @@ interface MemberCardProps {
     isActive: boolean
 }
 
-export default function MemberCard({name, image, role, isActive}: MemberCardProps){
+export default function MemberCard({id, name, image, role, isActive}: MemberCardProps){
     return (
         <div className='member-card'>
            <div className="member-card-image">
