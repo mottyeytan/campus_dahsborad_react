@@ -1,0 +1,22 @@
+
+[
+    {  
+           "id": 1,
+           "name" : "Glenda Garcia",
+           "image" : "./src/assets/profile1.png",
+           "role":  "CO-Organizer",
+           "isActive" : true,
+           "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}]
+    },
+    {  
+        "id": 2,
+        "name" : "motty eytan",
+        "image" : "./src/assets/profile1.png",
+        "role":  "CEOr",
+        "isActive" : true,
+        "tasks": []
+
+ }
+
+
+]
