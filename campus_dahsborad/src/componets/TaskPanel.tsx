@@ -1,33 +1,3 @@
-// import { useState } from "react"
-// import type { tasks } from "../interface/member"
-// import '../componets.css/TaskPanel.css'
-
-
-// interface TaskpanelProps {
-//     tasks: tasks[]
-// }
-
-
-// export default function Taskpanel({tasks}: TaskpanelProps){
-//     return(
-//         <div className="taskpanel">
-//             <h1>Tasks</h1>
-
-//             {tasks.map((task: tasks)=>{return(
-//                 <ul>
-//                     <li>
-//                         {task.task}
-//                     </li>
-//                 </ul>
-
-//             )})}
-            
-
-
-
-            
-//         </div>
-//     )}
 
 import { useState } from "react"
 import type { tasks } from "../interface/member"
