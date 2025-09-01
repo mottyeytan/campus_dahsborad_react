@@ -13,7 +13,7 @@
         "name" : "motty eytan",
         "image" : "/profile1.png",
         "role":  "CEOr",
-        "isActive" : true,
+        "isActive" : false,
         "tasks": []
 
  },
@@ -22,7 +22,7 @@
     "name" : "motty eytan",
     "image" : "/profile1.png",
     "role":  "CEOr",
-    "isActive" : false,
+    "isActive" : true,
     "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"2", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"3", "task": "v ifrjhireojfreogjfo", "done": true}]
  },
  {
@@ -38,7 +38,7 @@
     "name" : "motty eytan",
     "image" : "/profile1.png",
     "role":  "CEOr",
-    "isActive" : false,
+    "isActive" : true,
     "tasks": [{"id":"1", "task":"needs work", "done": false}]
  }
 

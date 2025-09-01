@@ -33,7 +33,7 @@ function AppContent() {
 
       <FilterBar />
       
-    <div className={view === 'grid' ? 'grid' : 'list'}>
+    <div className={view === 'grid' ? 'grid' : 'list'} id='members-container'>
       
       {active && search === "" ? members.filter(member => member.isActive === active).map(member => {
         return(
