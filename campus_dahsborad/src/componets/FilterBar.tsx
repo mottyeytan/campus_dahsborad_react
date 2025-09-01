@@ -1,41 +1,18 @@
-import { useState } from 'react'
 import '../componets.css/FilterBar.css'
-import type {MouseEvent } from 'react'
-// import { view } from '../context/selcetedView'
-import { useContext } from 'react'
+import { useContext, type ChangeEvent } from 'react'
 import { selectedViewContext } from '../context/selcetedView'
 import { selectedActiveContext } from '../context/selctedActive'
+import { searchContext, type SearchContextType } from '../context/search'
 
 
 export default function FilterBar(){
     const { setView} = useContext(selectedViewContext)
     const { active, setActive} = useContext(selectedActiveContext)
-    // const [search, setSearch] = useState('')
+    const { search, setSearch} = useContext(searchContext)
 
-
-    // function ToggleActive(){
-    //     setIsActive(!isActive)
-
-    // }
-
-    // function LayoutView(e: MouseEvent<HTMLButtonElement>){
-    //     e.preventDefault()
-    //     if(e.currentTarget.classList.contains('grid-view')){
-    //         handleView(view.GRID)
-    //         console.log('GRID')
-    //     } else if(e.currentTarget.classList.contains('list-view')){
-    //         handleView(view.LIST)
-    //         console.log('LIST')
-    //     }
-
-    // }
-
-    // function SearchEvent(e: MouseEvent<HTMLInputElement>){
-    //     e.preventDefault()
-    //     setSearch(e.currentTarget.value)
-    //     console.log(search)
-    // }
-
+    function handleSearch(e: ChangeEvent<HTMLInputElement>){
+        setSearch(e.target.value)
+    }
 
     return (
         <div className='filter-bar'>
@@ -50,7 +27,7 @@ export default function FilterBar(){
 
 
             <div className= "search-bar">
-                <input type='text' placeholder='Search for an Event'  />
+                <input type='text' placeholder='Search for an Event' value={search} onChange={handleSearch} />
             </div>
 
         </div>

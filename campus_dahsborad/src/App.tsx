@@ -10,13 +10,14 @@ import type { tasks } from './interface/member'
 import Taskpanel from './componets/TaskPanel' 
 import SelectedViewProvider, { selectedViewContext } from './context/selcetedView'
 import SelectedActiveProvider, { selectedActiveContext } from './context/selctedActive'
-
+import SearchContextProvider, { searchContext } from './context/search'
+import type { SearchContextType } from './context/search'
 
 function AppContent() {
   const { value, setValue } = useContext(selctedContext);
   const { view } = useContext(selectedViewContext);
   const { active } = useContext(selectedActiveContext);
-  
+  const { search } = useContext(searchContext);
 
   const [selectedMember, setSelectedMember] = useState(false)
   
@@ -34,7 +35,7 @@ function AppContent() {
       
     <div className={view === 'grid' ? 'grid' : 'list'}>
       
-      {active ? members.filter(member => member.isActive === active).map(member => {
+      {active && search === "" ? members.filter(member => member.isActive === active).map(member => {
         return(
           
           <MemberCard 
@@ -49,7 +50,7 @@ function AppContent() {
           />
           
         )
-      }) : members.map(member => {
+      }) : members.filter(member => member.name.toLowerCase().includes(search.toLowerCase())).map(member => {
         return(
           <MemberCard 
             key={member.id}
@@ -77,13 +78,15 @@ function AppContent() {
 
 function App() {
   return (
-    <SelectedViewProvider>
-      <SelectedActiveProvider>
-      <ContextProvider>
-          <AppContent />
-        </ContextProvider>
-      </SelectedActiveProvider>
-    </SelectedViewProvider>
+    <SearchContextProvider>
+      <SelectedViewProvider>
+        <SelectedActiveProvider>
+        <ContextProvider>
+            <AppContent />
+          </ContextProvider>
+        </SelectedActiveProvider>
+      </SelectedViewProvider>
+    </SearchContextProvider>
   )
 }
 
