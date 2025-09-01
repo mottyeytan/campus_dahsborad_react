@@ -36,7 +36,7 @@
  {
     "id": 5,
     "name" : "motty eytan",
-    "image" : "./src/assets/profile1.png",
+    "image" : "/assets/profile1.png",
     "role":  "CEOr",
     "isActive" : false,
     "tasks": [{"id":"1", "task":"needs work", "done": false}]
