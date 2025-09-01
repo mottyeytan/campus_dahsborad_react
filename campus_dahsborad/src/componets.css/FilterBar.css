@@ -5,11 +5,42 @@
     background-color: #f0f0f0;
     padding: 10px;
     border-radius: 10px;
-    gap: 5px;
+    gap: 15px;
 }
 
 .switch-layout{
     display: flex;
+    gap: 5px;
+}
+    
+
+.search-bar{
+    display: flex;
     gap: 10px;
 }
+
+.search-bar input{
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.grid-view,.list-view{
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.grid-view:hover,.list-view:hover{
+    background-color: #aeaeae;
+    color: #fff;
+}
+
+/* .grid-view:active,.list-view:active{
+    background-color: #cbcbcb;
+    color: #fff;
+} */
 

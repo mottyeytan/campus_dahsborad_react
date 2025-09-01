@@ -27,7 +27,7 @@ export default function FilterBar(){
 
 
             <div className= "search-bar">
-                <input type='text' placeholder='Search for an Event' value={search} onChange={handleSearch} />
+                <input type='text' placeholder='Search for a member' value={search} onChange={handleSearch} />
             </div>
 
         </div>
