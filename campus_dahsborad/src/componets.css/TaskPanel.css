@@ -1,17 +1,17 @@
 .taskpanel {
-    background: #d1cccc;
+    background: #e4dede;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 24px;
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:  2px 8px 10px rgba(0, 0, 0, 0.1);
     min-height: 200px;
     position: sticky;
   
 }
 
 .taskpanel h1 {
-    color: #ffffff;
+    color: #00000072;
     margin: 0 0 16px 0;
     font-size: 3rem;
     font-weight: 700;
