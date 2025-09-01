@@ -12,13 +12,15 @@ import SelectedViewProvider, { selectedViewContext } from './context/selcetedVie
 import SelectedActiveProvider, { selectedActiveContext } from './context/selctedActive'
 import SearchContextProvider, { searchContext } from './context/search'
 import type { SearchContextType } from './context/search'
+import AlertContextProvider, { alertContext } from './context/alert'
+import InactiveAlert from './componets/inactiveAlert'
 
 function AppContent() {
   const { value, setValue } = useContext(selctedContext);
   const { view } = useContext(selectedViewContext);
   const { active } = useContext(selectedActiveContext);
   const { search } = useContext(searchContext);
-
+  const { alert } = useContext(alertContext)
   const [selectedMember, setSelectedMember] = useState(false)
   
   function handleClick(tasks: tasks[]){
@@ -32,6 +34,8 @@ function AppContent() {
       <h1 className="title">Campus Club Dashboard</h1>
 
       <FilterBar />
+
+      {alert && <InactiveAlert />}
       
     <div className={view === 'grid' ? 'grid' : 'list'} id='members-container'>
       
@@ -78,6 +82,7 @@ function AppContent() {
 
 function App() {
   return (
+    <AlertContextProvider>
     <SearchContextProvider>
       <SelectedViewProvider>
         <SelectedActiveProvider>
@@ -87,6 +92,7 @@ function App() {
         </SelectedActiveProvider>
       </SelectedViewProvider>
     </SearchContextProvider>
+    </AlertContextProvider>
   )
 }
 
