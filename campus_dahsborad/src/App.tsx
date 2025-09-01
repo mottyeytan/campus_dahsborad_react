@@ -9,6 +9,7 @@ import {selctedContext} from './context/selcetedMember'
 import type { tasks } from './interface/member'
 import Taskpanel from './componets/TaskPanel' 
 import SelectedViewProvider, { selectedViewContext } from './context/selcetedView'
+import SelectedActiveProvider, { selectedActiveContext } from './context/selctedActive'
 
 
 
@@ -16,7 +17,8 @@ import SelectedViewProvider, { selectedViewContext } from './context/selcetedVie
 function AppContent() {
   const { value, setValue } = useContext(selctedContext);
   const { view } = useContext(selectedViewContext);
-  
+  const { active } = useContext(selectedActiveContext);
+  console.log(active)
 
   const [selectedMember, setSelectedMember] = useState(false)
   
@@ -33,7 +35,8 @@ function AppContent() {
       <FilterBar />
       
     <div className={view === 'grid' ? 'grid' : 'list'}>
-      {members.map(member => {
+      
+      {active ? members.filter(member => member.isActive === active).map(member => {
         return(
           
           <MemberCard 
@@ -47,6 +50,19 @@ function AppContent() {
             tasks={member.tasks}
           />
           
+        )
+      }) : members.map(member => {
+        return(
+          <MemberCard 
+            key={member.id}
+            id={member.id}
+            name={member.name}
+            image={member.image}
+            role={member.role}
+            isActive={member.isActive}
+            onClick={handleClick}
+            tasks={member.tasks}
+          />
         )
       })}
       </div>
@@ -64,9 +80,11 @@ function AppContent() {
 function App() {
   return (
     <SelectedViewProvider>
+      <SelectedActiveProvider>
       <ContextProvider>
-        <AppContent />
-      </ContextProvider>
+          <AppContent />
+        </ContextProvider>
+      </SelectedActiveProvider>
     </SelectedViewProvider>
   )
 }
