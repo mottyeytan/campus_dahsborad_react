@@ -3,7 +3,7 @@
     {  
            "id": 1,
            "name" : "Glenda Garcia",
-           "image" : "/profile1.png",
+           "image" : "/girl.png",
            "role":  "CO-Organizer",
            "isActive" : true,
            "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"2", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"3", "task": "v ifrjhireojfreogjfo", "done": true}]
@@ -12,32 +12,32 @@
         "id": 2,
         "name" : "motty eytan",
         "image" : "/profile1.png",
-        "role":  "CEOr",
+        "role":  "CEO",
         "isActive" : false,
         "tasks": []
 
  },
  {
     "id": 3,
-    "name" : "motty eytan",
-    "image" : "/profile1.png",
+    "name" : "danel akiva",
+    "image" : "/profile2.png",
     "role":  "CEOr",
     "isActive" : true,
     "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"2", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"3", "task": "v ifrjhireojfreogjfo", "done": true}]
  },
  {
     "id": 4,
-    "name" : "motty eytan",
-    "image" : "/profile1.png",
-    "role":  "CEOr",
-    "isActive" : true,
-    "tasks": [{"id":"1", "task":"needs work", "done": false}, {"id":"2", "task":"needs help", "done": false}, {"id":"3", "task":"needs advice", "done": false}]
+    "name" : "elad liad",
+    "image" : "/profile3.png",
+    "role":  "Manager",
+    "isActive" : false,
+    "tasks": []
  },
  {
     "id": 5,
-    "name" : "motty eytan",
-    "image" : "/profile1.png",
-    "role":  "CEOr",
+    "name" : "yakov shkolnik",
+    "image" : "/profile4.png",
+    "role":  "product manager",
     "isActive" : true,
     "tasks": [{"id":"1", "task":"needs work", "done": false}]
  }
