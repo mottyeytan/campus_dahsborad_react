@@ -8,13 +8,15 @@ import {useContext, useState} from 'react'
 import {selctedContext} from './context/selcetedMember'
 import type { tasks } from './interface/member'
 import Taskpanel from './componets/TaskPanel' 
+import SelectedViewProvider, { selectedViewContext } from './context/selcetedView'
 
 
 
 
 function AppContent() {
   const { value, setValue } = useContext(selctedContext);
-  console.log(value)
+  const { view } = useContext(selectedViewContext);
+  
 
   const [selectedMember, setSelectedMember] = useState(false)
   
@@ -22,14 +24,18 @@ function AppContent() {
     setValue(tasks)
     setSelectedMember(true)
   }
+
+
   return (
     <div className='container'>
       <h1 className="title">Campus Club Dashboard</h1>
 
-      <FilterBar/>
-
+      <FilterBar />
+      
+    <div className={view === 'grid' ? 'grid' : 'list'}>
       {members.map(member => {
         return(
+          
           <MemberCard 
             key={member.id}
             id={member.id}
@@ -40,8 +46,10 @@ function AppContent() {
             onClick={handleClick}
             tasks={member.tasks}
           />
+          
         )
       })}
+      </div>
 
 
       <Taskpanel tasks={value} selectedMember={selectedMember}/> 
@@ -55,9 +63,11 @@ function AppContent() {
 
 function App() {
   return (
-    <ContextProvider>
-      <AppContent />
-    </ContextProvider>
+    <SelectedViewProvider>
+      <ContextProvider>
+        <AppContent />
+      </ContextProvider>
+    </SelectedViewProvider>
   )
 }
 

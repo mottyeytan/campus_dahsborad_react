@@ -16,6 +16,22 @@
         "isActive" : true,
         "tasks": []
 
+ },
+ {
+    "id": 3,
+    "name" : "motty eytan",
+    "image" : "./src/assets/profile1.png",
+    "role":  "CEOr",
+    "isActive" : true,
+    "tasks": []
+ },
+ {
+    "id": 4,
+    "name" : "motty eytan",
+    "image" : "./src/assets/profile1.png",
+    "role":  "CEOr",
+    "isActive" : true,
+    "tasks": []
  }
 
 
