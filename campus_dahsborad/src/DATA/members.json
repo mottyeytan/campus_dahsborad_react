@@ -6,7 +6,7 @@
            "image" : "./src/assets/profile1.png",
            "role":  "CO-Organizer",
            "isActive" : true,
-           "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}]
+           "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"2", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"3", "task": "v ifrjhireojfreogjfo", "done": true}]
     },
     {  
         "id": 2,
@@ -22,8 +22,8 @@
     "name" : "motty eytan",
     "image" : "./src/assets/profile1.png",
     "role":  "CEOr",
-    "isActive" : true,
-    "tasks": []
+    "isActive" : false,
+    "tasks": [{"id":"1", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"2", "task": "v ifrjhireojfreogjfo", "done": true}, {"id":"3", "task": "v ifrjhireojfreogjfo", "done": true}]
  },
  {
     "id": 4,
@@ -31,7 +31,15 @@
     "image" : "./src/assets/profile1.png",
     "role":  "CEOr",
     "isActive" : true,
-    "tasks": []
+    "tasks": [{"id":"1", "task":"needs work", "done": false}, {"id":"2", "task":"needs help", "done": false}, {"id":"3", "task":"needs advice", "done": false}]
+ },
+ {
+    "id": 5,
+    "name" : "motty eytan",
+    "image" : "./src/assets/profile1.png",
+    "role":  "CEOr",
+    "isActive" : false,
+    "tasks": [{"id":"1", "task":"needs work", "done": false}]
  }
 
 

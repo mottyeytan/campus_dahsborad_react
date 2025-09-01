@@ -17,6 +17,7 @@ export default function MemberCard({id, name, image, role, isActive, onClick, ta
            <div className="member-card-details">
             <div className="member-card-name">{name}</div>
             <div className="member-card-role">{role}</div>
+            <div className="member-card-isActive">{isActive ? 'Active' : 'Inactive'}</div>
            </div>
 
            <button className = "role-button"
